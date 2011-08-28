@@ -16,7 +16,7 @@ request.php
 	
 	$curlWrapper1 = new curlWrapper($curlOptions);
 	$curlWrapper2 = new curlWrapper($curlOptions);
-	$curlWrapper1->request('http://www.yandex.ru/');
+	$curlWrapper1->request('http://www.google.com/');
 	$curlWrapper2->request('http://www.yandex.ru/');
 	
 	echo $curlWrapper1->getContent();
