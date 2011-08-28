@@ -1,0 +1,23 @@
+Curl Wrapper for phpcurl, support multi thread http request
+
+Example:
+
+config.php
+
+	//curl config
+	$curlOptions = array (
+		'tmpDir' => 'tmp/',
+	         'userAgent' => 'Mozilla/5.0 (Windows; I; Windows NT 5.1; ru; rv:1.9.2.13) Gecko/20100101 Firefox/4.0',
+	);
+
+request.php
+
+	require('./curlWrapper/curlWrapper.php');
+	
+	$curlWrapper1 = new curlWrapper($curlOptions);
+	$curlWrapper2 = new curlWrapper($curlOptions);
+	$curlWrapper1->request('http://www.yandex.ru/');
+	$curlWrapper2->request('http://www.yandex.ru/');
+	
+	echo $curlWrapper1->getContent();
+	echo $curlWrapper2->getContent();
