@@ -6,7 +6,7 @@ config.php
 
 	//curl config
 	$curlOptions = array (
-		'tmpDir' => 'tmp/',
+		'tmpDir' => '/tmp', //Temp dir for cookie file
 		'userAgent' => 'Mozilla/5.0 (Windows; I; Windows NT 5.1; ru; rv:1.9.2.13) Gecko/20100101 Firefox/4.0',
 	);
 
