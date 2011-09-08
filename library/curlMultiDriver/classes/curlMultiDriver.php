@@ -15,7 +15,7 @@ class curlMultiDriver extends curlMultiDriverAbstract {
 		if ($this->checkMultiHandle($this->curlMultiHandle))
 			return($this->curlMultiHandle);
 		else
-			throw new Exception('Unable to create a curl multi resource'); // MESSAGE_RU: Не удается создать curl multi ресурс
+			throw new Exception('Unable to create a curl multi resource'); // MESSAGE_RU: РќРµ СѓРґР°РµС‚СЃСЏ СЃРѕР·РґР°С‚СЊ curl multi СЂРµСЃСѓСЂСЃ
 	}
 		
 	protected function __distruct () {
@@ -32,7 +32,7 @@ class curlMultiDriver extends curlMultiDriverAbstract {
 			$this->curlHandles[] = $curlHandle;
 			return(curl_multi_add_handle($this->curlMultiHandle, $curlHandle));
 		} else
-			throw new Exception('Resource is not a curl resource'); // MESSAGE_RU: Ресурс не является curl ресурсом	
+			throw new Exception('Resource is not a curl resource'); // MESSAGE_RU: Р РµСЃСѓСЂСЃ РЅРµ СЏРІР»СЏРµС‚СЃСЏ curl СЂРµСЃСѓСЂСЃРѕРј	
 	} 
 	
 	public function curlMultiRemoveHandle(&$curlHandle) {		
